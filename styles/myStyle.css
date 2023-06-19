@@ -51,6 +51,7 @@ header {
 header img { /*תמונה ראשית בהדר בחלק מהעמודים*/
     width: 100%;
     height: 350px;
+    object-fit: cover;/*מונע מהתמונה להימרח - חותך חלקים ממנה*/
 }
 
 
@@ -200,6 +201,7 @@ nav ul {
         margin: auto;
         transition: width 0.5s; /* אפקט הגדלת התמונה */
         border-radius: 15px;
+        object-fit: cover;/*מונע מהתמונה להימרח - חותך חלקים ממנה*/
     }
 
         #recommendation img:hover { /*  הגדלת התמונה במעבר עכבר */
