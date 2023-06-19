@@ -15,8 +15,9 @@ body {
     width: 100%;
     height: 100%;
 }
-h {
-    color: #232323;
+
+a.notAllowed {
+    cursor: not-allowed;
 }
 
 h1 {
