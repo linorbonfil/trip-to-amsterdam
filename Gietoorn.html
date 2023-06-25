@@ -18,7 +18,8 @@
 
 </head>
 
-<body>
+<body onload="initSliders()"> <!--קריאה לפונקציה בעת טעינת העמוד - להצגת התמונה הראשונה בגלריית התמונות כתמונה הגדולה--> 
+
     <!------------------ header ------------------->
     <header>
         <nav aria-label=”main-nav”>
@@ -102,7 +103,9 @@
                     <p> ההתניידות באמצעות רכב ממונע אסורה, ולכן הדרך המומלצת לטיול היא באמצעות קנו, סירה, אופניים, וכמובן רגלית. <p />
                     <p> האווירה הקסומה והייחודית של הכפר תרמה להיותו מוקד תיירות חשוב ביותר בהולנד, עם בתי קפה ומסעדות. <p />
                 </section>
-
+                <section id="videoGiet">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4LqN4XveScc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </section>
                 <section>
                     <h3>  דרכי הגעה </h3>
 
@@ -117,13 +120,86 @@
                     <p>חשוב לא לפספס את גולת הכותרת של חיטהורן היפהפייה - השכרת סירה עצמאית ושייט בתעלות.  אנחנו ממליצים על מייק מקפה 27 TWENTY SEVEN בכתובת Ds. T.O. Hylkemaweg 27, 8355 CE Giethoorn  <p>
                 </section>
 
-                <section id="videoGiet">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4LqN4XveScc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
+
+                <!------------------------------גלריה------------------------------>
+                <section>
+                    <div class="containerGallery">
+                        <!--קונטינר של כל הגלריה-->
+                        <!-- תמונות ממוזערות -->
+                        <div class="row">
+                            <div class="column">
+                                <img class="demo" src="/images/gietoorn1.jpg" onclick="currentSlide(1)" alt="סירה קטנה בתעלות של חיטהורן">
+                            </div>
+                            <div class="column">
+                                <img class="demo" src="/images/gietoorn2.jpg" onclick="currentSlide(2)" alt="כבשים רועות בדשא של חיטהורן">
+                            </div>
+                            <div class="column">
+                                <img class="demo" src="/images/gietoorn3.jpg" onclick="currentSlide(3)" alt="סוסים בטבע">
+                            </div>
+                            <div class="column">
+                                <img class="demo " src="/images/gietoorn4.jpg" onclick="currentSlide(4)" alt="סירת תיירים בתעלות חיטהורן">
+                            </div>
+                            <div class="column">
+                                <img class="demo" src="/images/gietoorn5.jpg" onclick="currentSlide(5)" alt="נוף מדהים של חיטהורן הציורית">
+                            </div>
+                            <div class="column">
+                                <img class="demo" src="/images/gietoorn6.jpg" onclick="currentSlide(6)" alt="ברווז על המים של תעלות חיטהורן">
+                            </div>
+                        </div>
+
+                        <!-- התמונה גדולה -->
+                        <div class="mySlidesContainer">
+                            <div class="mySlides">
+                                <div class="numbertext">1 / 6</div>
+                                <img src="/images/gietoorn1.jpg">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">2 / 6</div>
+                                <img src="/images/gietoorn2.jpg">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">3 / 6</div>
+                                <img src="/images/gietoorn3.jpg">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">4 / 6</div>
+                                <img src="/images/gietoorn4.jpg">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">5 / 6</div>
+                                <img src="/images/gietoorn5.jpg">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">6 / 6</div>
+                                <img src="/images/gietoorn6.jpg">
+                            </div>
+
+                            <!-- חיצים ימינה ושמאלה -->
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                            <!-- כותרת הטקסט שתוצג -->
+                            <div class="caption-container">
+                                <p id="caption"></p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
+
+                <!------------------------------סיום גלריה------------------------------>
+
             </article>
         </main>
-        <!------------------------------סיום התוכן הראשי בעמוד------------------------------>
     </div>
+
 
     <!-------------------פוטר-------------------->
     <footer>
